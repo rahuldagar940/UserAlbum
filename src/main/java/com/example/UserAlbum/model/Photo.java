@@ -1,8 +1,11 @@
 package com.example.UserAlbum.model;
 
+import org.springframework.data.annotation.Id;
+
 public class Photo
 {
-    private int photoID;
+    @Id
+    private String id;
     private int albumID;
     private String photoURL;
     private String createdBy;
@@ -14,12 +17,12 @@ public class Photo
         this.dateCreated = dateCreated;
     }
 
-    public int getPhotoID() {
-        return photoID;
+    public String getId() {
+        return id;
     }
 
-    public void setPhotoID(int photoID) {
-        this.photoID = photoID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getAlbumID() {

@@ -1,7 +1,10 @@
 package com.example.UserAlbum.model;
 
+import org.springframework.data.annotation.Id;
+
 public class User {
-    private int userID;
+    @Id
+    private String id;
     private String name;
     private String email;
     private String profilePicURL;
@@ -12,12 +15,12 @@ public class User {
         this.profilePicURL = profilePicURL;
     }
 
-    public int getUserID() {
-        return userID;
+    public String getId() {
+        return id;
     }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
